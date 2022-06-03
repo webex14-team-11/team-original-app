@@ -1,9 +1,12 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div>
+    <div class="nav">
+      <router-link to="/" class="nav_logo">B-league</router-link>
+      <router-link to="/map" class="nav_link">Map</router-link>
+      <router-link to="/tips" class="nav_link">Tips</router-link>
+    </div>
+    <router-view />
+  </div>
 </template>
 
 <style>
@@ -14,17 +17,32 @@
   text-align: center;
   color: #2c3e50;
 }
+.nav_logo {
+  font-size: 50px;
+  margin: 0 60px 0 40px;
+}
 
-nav {
+.nav {
+  display: flex;
   padding: 30px;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: #797979;
 }
 
-nav a {
+.nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
 }
 
-nav a.router-link-exact-active {
+.nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.nav_link {
+  margin: 0 20px;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
 }
 </style>
