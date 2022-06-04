@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router"
 import HomeView from "../views/HomeView.vue"
 import MapView from "../views/MapView.vue"
-import TipsView from "../views/TipsView.vue"
+import BLeague from "../views/BleagueView.vue"
+import BasicKnowledge from "../views/BasicKnowledge.vue"
+
 const routes = [
   {
     path: "/",
@@ -14,9 +16,14 @@ const routes = [
     component: MapView,
   },
   {
-    path: "/tips",
-    name: "Tips",
-    component: TipsView,
+    path: "/B.league",
+    name: "BLeague",
+    component: BLeague,
+  },
+  {
+    path: "/basic-knowledge",
+    name: "basic-knowledge",
+    component: BasicKnowledge,
   },
 ]
 

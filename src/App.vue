@@ -2,8 +2,11 @@
   <div>
     <div class="nav">
       <router-link to="/" class="nav_logo">B-league</router-link>
+      <router-link to="/basic-knowledge" class="nav_link"
+        >Basic knowledge</router-link
+      >
+      <router-link to="/B.league" class="nav_link">B .LEAGUE</router-link>
       <router-link to="/map" class="nav_link">Map</router-link>
-      <router-link to="/tips" class="nav_link">Tips</router-link>
     </div>
     <router-view />
   </div>
