@@ -13,12 +13,9 @@
         <li>ルール</li>
         <li>ポジション</li>
       </ul>
-      <button
-        class="basicKowlage"
-        onclick="location.href='@/views/BasicKnowledge.vue'"
-      >
-        Learn more
-      </button>
+      <div class="button1">
+        <a href="@/views/BasicKnowledge.vue">Learn more</a>
+      </div>
     </div>
     <div class="aboutBleague">
       <h2 class="aboutBleague">About B.LEAGUE</h2>
@@ -26,12 +23,9 @@
         Bリーグの魅力を紹介！
         <p class="aboutBleague">バスケ観戦の仕方を紹介！</p>
       </h3>
-      <button
-        class="aboutBleague"
-        onclick="location.href='../views/BleagueView.vue'"
-      >
-        Learn more
-      </button>
+      <div class="button1">
+        <a href="@/views/BleagueView.vue">Learn more</a>
+      </div>
     </div>
     <div class="map">
       <h2 class="map">Map</h2>
@@ -39,9 +33,9 @@
         各都道府県のチームの本拠地をマップ上で掲載！
         <p class="map">各チームの魅力・特色を紹介！</p>
       </h3>
-      <button class="map" onclick="location.href='../views/MapView.vue'">
-        Learn more
-      </button>
+      <div class="button1">
+        <a href="@/views/MapView.vue">Learn more</a>
+      </div>
     </div>
   </div>
 </template>
@@ -65,6 +59,7 @@ p.title {
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: rgb(226, 223, 223);
+  padding-bottom: 20px;
 }
 .nav2 > div {
   width: 100%;
@@ -81,6 +76,8 @@ h2.basicKowlage {
 }
 .basicKowlage-list {
   list-style: square;
+  font-size: 20px;
+  font-style: bold;
 }
 .aboutBleague {
   text-align: right;
@@ -104,5 +101,37 @@ h2.map {
 }
 h2.map {
   text-align: left;
+}
+.button1 a {
+  background: #eee;
+  border-radius: 3px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 280px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+.button1 a:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #313131;
+  border-right: 3px solid #313131;
+  transform: rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.3s ease-in-out;
+}
+.button1 a:hover {
+  background: #313131;
+  color: #fff;
+}
+.button1 a:hover:after {
+  border-color: #fff;
 }
 </style>

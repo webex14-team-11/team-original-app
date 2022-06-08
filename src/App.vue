@@ -18,7 +18,7 @@
     <ul class="footer-menu">
       <li>Basic Knowledge ｜</li>
       <li>B .LEAGUE ｜</li>
-      <li>Map che</li>
+      <li>Map</li>
     </ul>
     <p>© All rights reserved by B.LEAGUE INTRODUCTION</p>
   </div>
