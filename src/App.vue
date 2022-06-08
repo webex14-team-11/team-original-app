@@ -70,6 +70,7 @@
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   text-align: center;
+  border-top: 6px solid rgb(226, 223, 223);
 }
 ul.footer-menu li {
   display: inline;
