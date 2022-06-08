@@ -39,7 +39,7 @@
 
 .nav {
   display: flex;
-  padding: 30px;
+  padding: 20px;
   align-items: stretch;
   justify-content: space-between;
   background-color: #ffffff;
@@ -47,6 +47,7 @@
 
 .nav a {
   font-weight: bold;
+  font-size: 25px;
   color: rgb(0, 0, 0);
 }
 
