@@ -43,6 +43,9 @@
   align-items: stretch;
   justify-content: space-between;
   background-color: #ffffff;
+  border-bottom: 6px solid rgb(226, 223, 223);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .nav a {

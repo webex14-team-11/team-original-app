@@ -90,9 +90,8 @@ h2.aboutBleague {
   color: #000000;
 }
 h3.aboutBleague {
-  text-align: left;
+  text-align: right;
   font-style: bold;
-  font-size: 45px;
 }
 .map {
   text-align: left;
