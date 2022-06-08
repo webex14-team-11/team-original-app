@@ -1,11 +1,26 @@
 <template>
   <div>
     <div class="nav">
-      <router-link to="/" class="nav_logo">B-league</router-link>
+      <div class="logo">
+        <a href="/"
+          ><img src="./assets/saitologo.jpg" alt="" class="nav_logo"
+        /></a>
+      </div>
+      <router-link to="/basic-knowledge" class="nav_link"
+        >Basic Knowledge</router-link
+      >
+      <router-link to="/B.league" class="nav_link">B .LEAGUE</router-link>
       <router-link to="/map" class="nav_link">Map</router-link>
-      <router-link to="/tips" class="nav_link">Tips</router-link>
     </div>
     <router-view />
+  </div>
+  <div class="footer">
+    <ul class="footer-menu">
+      <li>Basic Knowledge ｜</li>
+      <li>B .LEAGUE ｜</li>
+      <li>Map che</li>
+    </ul>
+    <p>© All rights reserved by B.LEAGUE INTRODUCTION</p>
   </div>
 </template>
 
@@ -18,8 +33,8 @@
   color: #2c3e50;
 }
 .nav_logo {
-  font-size: 50px;
-  margin: 0 60px 0 40px;
+  width: 200px;
+  height: auto;
 }
 
 .nav {
@@ -27,12 +42,12 @@
   padding: 30px;
   align-items: stretch;
   justify-content: space-between;
-  background-color: #797979;
+  background-color: #ffffff;
 }
 
 .nav a {
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .nav a.router-link-exact-active {
@@ -40,9 +55,19 @@
 }
 
 .nav_link {
-  margin: 0 20px;
+  padding: 15px;
   text-align: center;
   height: 60px;
   line-height: 60px;
+}
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+ul.footer-menu li {
+  display: inline;
 }
 </style>
