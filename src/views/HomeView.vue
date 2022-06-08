@@ -13,7 +13,12 @@
         <li>ルール</li>
         <li>ポジション</li>
       </ul>
-      <button class="basicKowlage">Learn more</button>
+      <button
+        class="basicKowlage"
+        onclick="location.href='@/views/BasicKnowledge.vue'"
+      >
+        Learn more
+      </button>
     </div>
     <div class="aboutBleague">
       <h2 class="aboutBleague">About B.LEAGUE</h2>
@@ -21,7 +26,12 @@
         Bリーグの魅力を紹介！
         <p class="aboutBleague">バスケ観戦の仕方を紹介！</p>
       </h3>
-      <button class="aboutBleague">Learn more</button>
+      <button
+        class="aboutBleague"
+        onclick="location.href='../views/BleagueView.vue'"
+      >
+        Learn more
+      </button>
     </div>
     <div class="map">
       <h2 class="map">Map</h2>
@@ -29,7 +39,9 @@
         各都道府県のチームの本拠地をマップ上で掲載！
         <p class="map">各チームの魅力・特色を紹介！</p>
       </h3>
-      <button class="map">Learn more</button>
+      <button class="map" onclick="location.href='../views/MapView.vue'">
+        Learn more
+      </button>
     </div>
   </div>
 </template>
