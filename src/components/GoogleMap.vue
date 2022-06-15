@@ -173,7 +173,9 @@ export default {
       window.mapLoadStarted = true
       let script = document.createElement("script")
       script.src =
-        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAZaDKmQe5k0iNN7kIweyZMzIi5eJAn5E4&callback=initMap"
+        "https://maps.googleapis.com/maps/api/js?key=" +
+        process.env.VUE_APP_API_KEY +
+        "&callback=initMap"
       script.async = true
       document.head.appendChild(script)
     }
