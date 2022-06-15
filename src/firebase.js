@@ -7,13 +7,13 @@ import { getFirestore } from "firebase/firestore"
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyC0U0IbJIiWitYInaVhqvWIP9NByiQuBNs",
-  authDomain: "team11-41843.firebaseapp.com",
-  projectId: "team11-41843",
-  storageBucket: "team11-41843.appspot.com",
-  messagingSenderId: "486826068879",
-  appId: "1:486826068879:web:26615617581fb2f6e199fa",
-  measurementId: "G-S1E7880Z5N",
+  apiKey: "AIzaSyBNoZvVSQRRtyO1vNvjj63jTVCf1PR_ESQ",
+  authDomain: "b-league-introduction.firebaseapp.com",
+  projectId: "b-league-introduction",
+  storageBucket: "b-league-introduction.appspot.com",
+  messagingSenderId: "170456910813",
+  appId: "1:170456910813:web:4b975c7a9afed8d96fc434",
+  measurementId: "G-E92BM83KDQ",
 }
 
 // Firebaseアプリオブジェクトを初期化
