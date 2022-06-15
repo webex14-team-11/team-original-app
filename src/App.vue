@@ -11,9 +11,10 @@
       >
       <router-link to="/B.league" class="nav_link">B .LEAGUE</router-link>
       <router-link to="/map" class="nav_link">Map</router-link>
+      <router-link to="/BBS" class="nav_link">BBS</router-link>
     </div>
-    <router-view />
   </div>
+  <router-view />
   <div class="footer">
     <ul class="footer-menu">
       <li>Basic Knowledge ｜</li>
