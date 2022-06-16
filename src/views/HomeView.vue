@@ -103,11 +103,11 @@ h2.aboutBleague {
   font-size: 45px;
   color: #000000;
 }
-<<<<<<< Updated upstream ======= h3.aboutBleague {
+h3.aboutBleague {
   text-align: left;
   font-style: bold;
 }
->>>>>>>Stashed changes .map {
+.map {
   text-align: left;
   padding-left: 30px;
 }
