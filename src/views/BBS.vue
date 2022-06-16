@@ -1,10 +1,12 @@
 <template>
   <div>
     <h1>掲示板</h1>
+    <h2>みんなの推しチームを知ろう！</h2>
     名前
     <div>
       <input type="text" v-model="name" />
     </div>
+    <br />
     推しチーム
     <div>
       <select v-model="team">
@@ -45,6 +47,7 @@
         </option>
       </select>
     </div>
+    <br />
     コメント
     <div>
       <textarea v-model="comment"></textarea>
