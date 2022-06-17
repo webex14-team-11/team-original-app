@@ -41,12 +41,10 @@
     </div>
     <div class="BBS">
       <h2 class="BBS">BBS</h2>
-      <ul class="BBS-list">
-        <h3>
-          掲示板！
-          <p>みんなの推しチームを紹介！</p>
-        </h3>
-      </ul>
+      <h3 class="BBS">
+        掲示板！
+        <p>みんなの推しチームを紹介！</p>
+      </h3>
       <div class="button1">
         <a href="@/views/BBS.vue">Learn more</a>
       </div>
@@ -71,11 +69,14 @@ p.title {
 .nav2 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   background-color: rgb(226, 223, 223);
   padding-bottom: 20px;
+  padding-left: 150px;
 }
 .nav2 > .basicKowlage {
+  width: 50%;
+}
+.nav2 > .map {
   width: 50%;
 }
 .basicKowlage {
@@ -105,6 +106,7 @@ h2.aboutBleague {
 }
 h3.aboutBleague {
   text-align: left;
+  font-size: 20px;
   font-style: bold;
 }
 .map {
@@ -120,6 +122,7 @@ h2.map {
 h3.map {
   text-align: left;
   font-style: bold;
+  font-size: 20px;
 }
 .BBS {
   text-align: left;
@@ -134,6 +137,7 @@ h2.BBS {
 h3.BBS {
   text-align: left;
   font-style: bold;
+  font-size: 20px;
 }
 .button1 a {
   background: #eee;
