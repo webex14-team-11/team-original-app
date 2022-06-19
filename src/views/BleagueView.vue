@@ -4,20 +4,21 @@
     <div class="square">
       <div class="pic_frame">
         <img class="icon1" src=@/assets/icon1.png />
-        <p class="name" id="about">About</p>
+        <p class="name">About</p>
         <p class="content">Bリーグとは？</p>
       </div>
       <div class="pic_frame">
         <img class="icon2" src=@/assets/icon2.png />
-        <p class="name" id="attraction">Attraction</p>
+        <p class="name">Attraction</p>
         <p class="content">Bリーグの魅力は？</p>
       </div>
       <div class="pic_frame">
         <img class="icon3" src=@/assets/icon3.png />
-        <p class="name" id="method">Method</p>
+        <p class="name">Method</p>
         <p class="content">Bリーグの観戦方法！</p>
       </div>
     </div>
+    <!--------------------about---------------------->
     <div class="about" id="about">
       <h1>About</h1>
       <h2><span>01</span>B-league全体チーム数</h2>
@@ -76,24 +77,22 @@
         <div class="right"></div>
       </div>
     </div>
+    <!--------------------attracyion---------------------->
     <div class="attraction" id="attraction">
       <h1>attraction</h1>
-      <div class="attraction" id="attraction">
-        <h2><span>01</span>観戦初心者に最適！！</h2>
-        <div class="attraction1">
-          <!--<img class="pyramid" src=@/assets/pyramid.png />-->
-          <div class="right">
-            <p class="text">
-              室内観戦なので天候の左右・日焼けなど気にせず楽しめる！
-            </p>
-            <p class="text">↓ ルールが分からなくても楽しめる！</p>
-            <ul>
-              <li>展開が早い！</li>
-              <li>盛り上がるチャンスが多い！</li>
-              <li>距離が近いから一体感・スピード感を味わえる！</li>
-              <li>かっこいいプレーが多い！</li>
-            </ul>
-          </div>
+      <h2><span>01</span>観戦初心者に最適！！</h2>
+      <div class="attraction1">
+        <div class="right">
+          <p class="text">
+            室内観戦なので天候の左右・日焼けなど気にせず楽しめる！
+          </p>
+          <p class="text">↓ ルールが分からなくても楽しめる！</p>
+          <ul>
+            <li>展開が早い！</li>
+            <li>盛り上がるチャンスが多い！</li>
+            <li>距離が近いから一体感・スピード感を味わえる！</li>
+            <li>かっこいいプレーが多い！</li>
+          </ul>
         </div>
       </div>
       <h2><span>02</span>試合前後・途中のアトラクション！</h2>
@@ -121,9 +120,10 @@
         </div>
       </div>
     </div>
-    <div class="method" id="method">
-      <h1>method</h1>
-    </div>
+  </div>
+  <!--------------------method---------------------->
+  <div class="method" id="method">
+    <h1>method</h1>
   </div>
 </template>
 
@@ -310,7 +310,7 @@ h1 {
 .food {
   width: 300px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 0;
   overflow: hidden;
   position: relative;
