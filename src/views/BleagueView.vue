@@ -19,7 +19,7 @@
       </div>
     </div>
     <!--------------------about---------------------->
-    <div class="about" v-on:click="about">
+    <div class="about" v-on:click="about" id="aboutPage">
       <h1>About</h1>
       <h2><span>01</span>B-league全体チーム数</h2>
       <div class="number-team">
@@ -124,6 +124,20 @@
   <!--------------------method---------------------->
   <div class="method" v-on:click="method">
     <h1>method</h1>
+    <h2>B.LEAGUEおすすめ視聴方法 👀</h2>
+    <p class="text">
+      おすすめは<span class="bsklive">「バスケットLIVE!」</span>
+    </p>
+    <p class="text">Bリーグ、日本代表等の試合をライブ＆見逃し配信で視聴可能!</p>
+    <p class="text">試合のハイライトや注目選手のインタビューなども！</p>
+    <p class="text">↓ クリック！</p>
+    <a href="https://basketball.mb.softbank.jp/">
+      <img class="bskliveapp" src=@/assets/bskliveapp.png/>
+    </a>
+    <a href="https://basketball.mb.softbank.jp/"
+      ><img class="bsklive" src=@/assets/bsklive.png
+      alt="https://basketball.mb.softbank.jp/"/>
+    </a>
   </div>
 </template>
 
@@ -143,6 +157,7 @@ h1 {
   width: 1280px;
   height: 380px;
   background: rgb(226, 223, 223);
+  border: 10px double #000000;
 }
 .pic_frame {
   display: inline-block;
@@ -324,5 +339,37 @@ h1 {
 .attraction3 .text {
   margin: 10px 0 0;
   padding: 0;
+}
+.method {
+  margin: 50px 40px 80px 40px;
+  background-color: rgb(209, 208, 208);
+  padding-bottom: 30px;
+}
+.method h2 {
+  position: relative;
+  margin: 0 10rem 0 10rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  border-bottom: 3px solid #000;
+}
+.bsklive {
+  font-size: 35px;
+  font-weight: 600;
+  color: rgb(226, 121, 121);
+}
+.bskliveapp {
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+.bsklive {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
 }
 </style>
