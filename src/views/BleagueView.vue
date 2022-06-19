@@ -19,7 +19,7 @@
       </div>
     </div>
     <!--------------------about---------------------->
-    <div class="about" id="about">
+    <div class="about" v-on:click="about">
       <h1>About</h1>
       <h2><span>01</span>B-league全体チーム数</h2>
       <div class="number-team">
@@ -78,7 +78,7 @@
       </div>
     </div>
     <!--------------------attracyion---------------------->
-    <div class="attraction" id="attraction">
+    <div class="attraction" v-on:click="attraction">
       <h1>attraction</h1>
       <h2><span>01</span>観戦初心者に最適！！</h2>
       <div class="attraction1">
@@ -122,7 +122,7 @@
     </div>
   </div>
   <!--------------------method---------------------->
-  <div class="method" id="method">
+  <div class="method" v-on:click="method">
     <h1>method</h1>
   </div>
 </template>
