@@ -58,6 +58,7 @@
     <br />
     <h2>投稿一覧</h2>
     <div v-for="post in posts" :key="post.name">
+      <button v-on:click="deleteUser(user.id)">削除</button>
       <hr />
       <p>名前：{{ post.fields.name.stringValue }}</p>
       <p>推しチーム：{{ post.fields.team.stringValue }}</p>
