@@ -61,22 +61,28 @@
   </div>
   <div class="post">
     <h2 class="postlist">Post list</h2>
-    <div v-for="tweet in tweets" :key="tweet.name">
-      <hr />
-      <p>Name：{{ tweet.name }}</p>
-      <p>Team：{{ tweet.team }}</p>
-      <p>comment：{{ tweet.comment }}</p>
+    <div class="content">
+      <div v-for="tweet in tweets" :key="tweet.name">
+        <hr />
+        <a
+          >Name：
+          <div class="list">{{ tweet.name }}</div></a
+        >
+        <a
+          >Team：
+          <div class="list">{{ tweet.team }}</div></a
+        >
+        <a
+          >comment：
+          <div class="list">{{ tweet.comment }}</div></a
+        >
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import {
-  collection,
-  addDoc,
-  getDocs,
-  serverTimestamp,
-} from "firebase/firestore"
+import { collection, addDoc, getDocs } from "firebase/firestore"
 import { db } from "../firebase"
 
 export default {
@@ -98,14 +104,13 @@ export default {
       if ((this.name == "") | (this.team == "") | (this.comment == "")) {
         alert("全ての項目を入力してください")
       } else {
-        addDoc(collection(db, "tweets"), {
-          createdAt: serverTimestamp(),
-        }).then((ref) => {
+        addDoc(collection(db, "tweets"), tweet).then((ref) => {
           this.tweets.push({
             id: ref.id,
             ...tweet,
           })
         })
+        console.log(tweet)
       }
       this.name = ""
       this.team = ""
@@ -127,7 +132,7 @@ export default {
 
 <style scope>
 .app {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
   -webkit-border-radius: 6px;
@@ -157,10 +162,11 @@ input,
 select,
 textarea {
   font-size: 1em;
+  font-weight: 700;
   padding: 15px 10px 10px;
   font-family: "Source Sans Pro", arial, sans-serif;
-  border: 1px solid #cecece;
-  background: #d7d7d7;
+  border: 1px solid #bbbbbb;
+  background: #c5c5c5;
   color: #fafafa;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -201,12 +207,41 @@ button:hover,
   border-bottom: 3px solid rgb(137, 137, 137);
 }
 .post {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
   background-color: #f7f7f7;
+}
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #edebeb;
+}
+.list {
+  font-size: 1em;
+  font-weight: 700;
+  padding: 15px 10px 15px 10px;
+  font-family: "Source Sans Pro", arial, sans-serif;
+  border: 1px solid #bbbbbb;
+  background: #c5c5c5;
+  color: #fafafa;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 800px;
 }
 </style>
