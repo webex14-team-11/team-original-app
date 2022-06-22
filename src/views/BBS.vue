@@ -130,7 +130,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 .app {
   max-width: 800px;
   margin: 0 auto;
