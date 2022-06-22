@@ -59,6 +59,7 @@
     <br />
     <br />
   </div>
+  <div>{{ tweet }}</div>
   <div class="post">
     <h2 class="postlist">Post list</h2>
     <div class="content">
@@ -110,22 +111,21 @@ export default {
             ...tweet,
           })
         })
-        console.log(tweet)
       }
       this.name = ""
       this.team = ""
       this.comment = ""
     },
-    created() {
-      getDocs(collection(db, "tweets")).then((snapshot) => {
-        snapshot.forEach((doc) => {
-          this.tweets.push({
-            id: doc.id,
-            ...doc.data(),
-          })
+  },
+  created: function () {
+    getDocs(collection(db, "tweets")).then((snapshot) => {
+      snapshot.forEach((doc) => {
+        this.tweets.push({
+          id: doc.id,
+          ...doc.data(),
         })
       })
-    },
+    })
   },
 }
 </script>
@@ -201,7 +201,6 @@ button:hover,
   background: #83b09b;
 }
 .postlist {
-  text-align: center;
   font-size: 2em;
   color: #4e4e4e;
   border-bottom: 3px solid rgb(137, 137, 137);
@@ -225,6 +224,7 @@ button:hover,
   background-color: #edebeb;
 }
 .list {
+  position: absolute;
   font-size: 1em;
   font-weight: 700;
   padding: 15px 10px 15px 10px;
