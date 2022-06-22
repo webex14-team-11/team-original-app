@@ -71,7 +71,12 @@
 </template>
 
 <script>
-import { collection, addDoc, getDocs } from "firebase/firestore"
+import {
+  collection,
+  addDoc,
+  getDocs,
+  serverTimestamp,
+} from "firebase/firestore"
 import { db } from "../firebase"
 
 export default {
@@ -93,7 +98,9 @@ export default {
       if ((this.name == "") | (this.team == "") | (this.comment == "")) {
         alert("全ての項目を入力してください")
       } else {
-        addDoc(collection(db, "tweets"), tweet).then((ref) => {
+        addDoc(collection(db, "tweets"), {
+          createdAt: serverTimestamp(),
+        }).then((ref) => {
           this.tweets.push({
             id: ref.id,
             ...tweet,
@@ -192,5 +199,14 @@ button:hover,
   font-size: 2em;
   color: #4e4e4e;
   border-bottom: 3px solid rgb(137, 137, 137);
+}
+.post {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #f7f7f7;
 }
 </style>
