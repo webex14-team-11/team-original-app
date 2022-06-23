@@ -145,7 +145,7 @@ h1 {
   font-family: "Montserrat";
   font-style: bold;
   font-size: 50px;
-  color: #000000;
+  color: #4e4e4e;
   padding-bottom: 15px;
 }
 .square {

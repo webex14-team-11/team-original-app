@@ -1,6 +1,5 @@
 <template>
   <div class="map">
-    <h1>This is map page</h1>
     <div>
       <google-map :zoom="4" />
     </div>

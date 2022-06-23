@@ -1,6 +1,21 @@
 <template>
   <h1>Google Map</h1>
-  <div ref="map" style="height: 800px; width: 1000px"></div>
+  <h2>
+    各チームのホームグラウンドがわかる！<br /><span>クリック</span>
+    すると各チームのホームページに飛べるよ！！
+  </h2>
+  <div ref="map" id="map"></div>
+  <div v-if="overlay">
+    <div id="Overlay">
+      <div id="teamData">
+        <div>チーム名:{{ selectedteam.name }}</div>
+        <div>
+          公式HP<a href="{{ selectedteam.URL }}">{{ selectedteam.URL }}</a>
+        </div>
+        <button v-on:click="del">戻る</button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -13,6 +28,8 @@ export default {
   },
   data() {
     return {
+      selectedteam: {},
+      overlay: false,
       start: { lat: 36.15295082154122, lng: 139.36590868766348 },
       teams: [
         {
@@ -20,24 +37,28 @@ export default {
           lat: 43.04448322003793,
           lng: 141.3769812394483,
           area: "east",
+          URL: "https://www.levanga.com/",
         },
         {
           name: "秋田ノーザンハピネッツ",
           lat: 39.72602404652841,
           lng: 140.08776054232789,
           area: "east",
+          URL: "https://www.northern-happinets.com/",
         },
         {
           name: "茨城ロボッツ",
           lat: 36.380980275374775,
           lng: 140.44780454232787,
           area: "east",
+          URL: "https://www.ibarakirobots.win/",
         },
         {
           name: "宇都宮ブレックス",
           lat: 36.561189941053875,
           lng: 139.9107246269836,
           area: "east",
+          URL: "https://www.utsunomiyabrex.com/",
         },
         {
           name: "群馬クレインサンダース",
@@ -183,6 +204,7 @@ export default {
     window.initMap = () => {
       window.mapLoaded = true
     }
+
     let timer = setInterval(() => {
       if (window.mapLoaded) {
         clearInterval(timer)
@@ -195,8 +217,10 @@ export default {
             position: { lat: this.teams[i].lat, lng: this.teams[i].lng },
             map,
           })
-          window.google.maps.event.addListener(A, "click", function () {
-            console.log("aaaa")
+          window.google.maps.event.addListener(A, "click", () => {
+            this.overlay = true
+            console.log(this.overlay)
+            this.selectedteam = this.teams[i]
           })
         }
 
@@ -211,5 +235,78 @@ export default {
       }
     }, 500)
   },
+  methods: {
+    del: function () {
+      this.overlay = false
+    },
+  },
 }
 </script>
+<style scoped>
+h1 {
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: bold;
+  font-size: 50px;
+  color: #4e4e4e;
+}
+h2 {
+  margin-top: -10px;
+  text-align: center;
+  padding: 0 0 18px 0;
+  font-size: 1.2em;
+  color: #4e4e4e;
+}
+span {
+  color: #e65656;
+  font-size: 1.3em;
+}
+#Overlay {
+  /*要素を重ねた時の順番*/
+  z-index: 1;
+
+  /*画面全体を覆う設定*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  /*画面の中央に要素を表示させる設定*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#teamData {
+  width: 45%;
+  height: 45%;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  justify-content: space-between;
+  padding: 170px 0px 60px 0px;
+  font-size: 40px;
+  border-radius: 15px;
+}
+#map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 20px;
+  border: solid 40px #8e8e8e;
+  margin-bottom: 150px;
+}
+button {
+  border-radius: 10px;
+  padding: 10px 30px 10px 30px;
+}
+</style>
