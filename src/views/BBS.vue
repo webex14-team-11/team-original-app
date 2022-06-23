@@ -244,7 +244,6 @@ button:hover,
   color: #7c7c7c;
 }
 .list {
-<<<<<<< HEAD
   font-size: 1em;
   font-weight: 700;
   padding: 15px 10px 15px 10px;
@@ -263,15 +262,5 @@ button:hover,
   box-sizing: border-box;
   width: 80%;
   max-width: 800px;
-=======
-  font-weight: 900;
-  color: black;
-  transition: all 0.8s;
-  transition: color 0.8;
-}
-.list:hover {
-  transform: scale(1.2, 1.2);
-  color: #98cbb3;
->>>>>>> origin/BBS
 }
 </style>
