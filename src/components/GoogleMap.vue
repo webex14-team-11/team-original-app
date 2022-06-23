@@ -303,7 +303,7 @@ span {
   width: 70%;
   border-radius: 20px;
   border: solid 40px #8e8e8e;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 button {
   border-radius: 10px;
