@@ -43,7 +43,7 @@ h1 {
 }
 .square {
   margin: 0 auto;
-  width: 1280px;
+  width: 85%;
   height: 380px;
   background: rgb(226, 223, 223);
 }

@@ -9,10 +9,12 @@
   <div class="nav2">
     <div class="basicKowlage">
       <h2 class="basicKowlage">Basic Knowlage</h2>
-      <ul class="basicKowlage-list">
-        <li>ルール</li>
-        <li>ポジション</li>
-      </ul>
+
+      <h3 class="basicKowlage">
+        ルール
+        <p>ポジション</p>
+      </h3>
+
       <div class="button1">
         <a href="@/views/BasicKnowledge.vue">Learn more</a>
       </div>
@@ -37,12 +39,25 @@
         <a href="@/views/MapView.vue">Learn more</a>
       </div>
     </div>
+    <div class="BBS">
+      <h2 class="BBS">BBS</h2>
+      <h3 class="BBS">
+        掲示板！
+        <p>みんなの推しチームを紹介！</p>
+      </h3>
+      <div class="button1">
+        <a href="@/views/BBS.vue">Learn more</a>
+      </div>
+    </div>
   </div>
 </template>
 
 <script></script>
 
 <style scoped>
+img {
+  width: 85%;
+}
 h1 {
   margin: 0 auto;
   font-family: "Montserrat";
@@ -57,12 +72,16 @@ p.title {
 .nav2 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   background-color: rgb(226, 223, 223);
   padding-bottom: 20px;
-}
-.nav2 > div {
+  padding-left: 150px;
   width: 100%;
+}
+.nav2 > .basicKowlage {
+  width: 50%;
+}
+.nav2 > .map {
+  width: 50%;
 }
 .basicKowlage {
   text-align: left;
@@ -74,13 +93,13 @@ h2.basicKowlage {
   font-size: 45px;
   color: #000000;
 }
-.basicKowlage-list {
+h3.basicKowlage {
   list-style: square;
   font-size: 20px;
   font-style: bold;
 }
 .aboutBleague {
-  text-align: right;
+  text-align: left;
   padding-right: 30px;
 }
 h2.aboutBleague {
@@ -90,7 +109,8 @@ h2.aboutBleague {
   color: #000000;
 }
 h3.aboutBleague {
-  text-align: right;
+  text-align: left;
+  font-size: 20px;
   font-style: bold;
 }
 .map {
@@ -103,8 +123,25 @@ h2.map {
   font-size: 45px;
   color: #000000;
 }
-h2.map {
+h3.map {
   text-align: left;
+  font-style: bold;
+  font-size: 20px;
+}
+.BBS {
+  text-align: left;
+  padding-right: 30px;
+}
+h2.BBS {
+  font-family: "Montserrat";
+  font-style: bold;
+  font-size: 45px;
+  color: #000000;
+}
+h3.BBS {
+  text-align: left;
+  font-style: bold;
+  font-size: 20px;
 }
 .button1 a {
   background: #eee;

@@ -2,17 +2,17 @@
   <div class="app">
     <div class="head">
       <h1>Bulletin Board System</h1>
-      <h2>みんなの推しチームを知ろう！</h2>
+      <h2>みんなに推しチームを共有しよう！</h2>
     </div>
     Name
     <div>
-      <input type="text" v-model="name" />
+      <input type="text" v-model="name" placeholder="ニックネーム" />
     </div>
     <br />
     Team
     <div>
       <select v-model="team">
-        <option disabled value="initial">Please Select</option>
+        <option value="" disabled selected>Please select</option>
         <option value="レバンガ北海道">北海道：レバンガ北海道</option>
         <option value="秋田ノーザンハピネッツ">
           秋田：秋田ノーザンハピネッツ
@@ -52,7 +52,10 @@
     <br />
     Comment
     <div>
-      <textarea v-model="comment"></textarea>
+      <textarea
+        v-model="comment"
+        placeholder="ex) 〇〇選手かっこいい！〇〇のセットプレーがすごい！チアが可愛い！etc.."
+      ></textarea>
     </div>
     <br />
     <button v-on:click="postTweet">Submit</button>
@@ -61,22 +64,18 @@
   </div>
   <div>{{ tweet }}</div>
   <div class="post">
-    <h2 class="postlist">Post list</h2>
-    <div class="content">
-      <div v-for="tweet in tweets" :key="tweet.name">
-        <hr />
-        <a
-          >Name：
-          <div class="list">{{ tweet.name }}</div></a
-        >
-        <a
-          >Team：
-          <div class="list">{{ tweet.team }}</div></a
-        >
-        <a
-          >comment：
-          <div class="list">{{ tweet.comment }}</div></a
-        >
+    <div class="postlist">
+      <h2>Post list</h2>
+      <h3>みんなの推しチームを知ろう！</h3>
+    </div>
+    <div v-for="tweet in tweets" :key="tweet.name">
+      <div class="content">
+        <h3 class="head2">Name</h3>
+        <h4 class="list">{{ tweet.name }}</h4>
+        <h3 class="head2">Team</h3>
+        <h4 class="list">{{ tweet.team }}</h4>
+        <h3 class="head2">Comment</h3>
+        <h4 class="list">{{ tweet.comment }}</h4>
       </div>
     </div>
   </div>
@@ -132,7 +131,7 @@ export default {
 
 <style scope>
 .app {
-  max-width: 800px;
+  max-width: 60%;
   margin: 0 auto;
   text-align: center;
   -webkit-border-radius: 6px;
@@ -201,47 +200,58 @@ button:hover,
   background: #83b09b;
 }
 .postlist {
+  -webkit-border-radius: 6px 6px 0px 0px;
+  -moz-border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
+  background-color: #98cbb3;
+}
+.postlist h2 {
+  text-align: center;
+  padding: 18px 0 0 0;
   font-size: 2em;
   color: #4e4e4e;
-  border-bottom: 3px solid rgb(137, 137, 137);
+}
+.postlist h3 {
+  text-align: center;
+  padding: 0 0 18px 0;
+  font-size: 1.2em;
+  color: #ffffff;
 }
 .post {
-  max-width: 800px;
+  max-width: 60%;
   margin: 0 auto;
   text-align: center;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
   background-color: #f7f7f7;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding-bottom: 20px;
 }
 .content {
-  max-width: 600px;
+  background: #f7f7f7;
+}
+.content {
+  width: 85%;
   margin: 0 auto;
-  text-align: center;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  background-color: #edebeb;
+  margin-bottom: 30px;
+  border: solid 3px rgb(137, 137, 137);
+  border-radius: 10px;
+}
+.head2 {
+  border-bottom: 2px solid rgb(137, 137, 137);
+  font-weight: 200;
+  color: #7c7c7c;
 }
 .list {
-  position: absolute;
-  font-size: 1em;
-  font-weight: 700;
-  padding: 15px 10px 15px 10px;
-  font-family: "Source Sans Pro", arial, sans-serif;
-  border: 1px solid #bbbbbb;
-  background: #c5c5c5;
-  color: #fafafa;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 80%;
-  max-width: 800px;
+  font-weight: 900;
+  color: black;
+  transition: all 0.8s;
+  transition: color 0.8;
+}
+.list:hover {
+  transform: scale(1.2, 1.2);
+  color: #98cbb3;
 }
 </style>
