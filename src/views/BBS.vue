@@ -91,6 +91,7 @@ export default {
       name: "",
       comment: "",
       team: "",
+      timestamp: "",
       tweets: [],
     }
   },
@@ -231,8 +232,6 @@ button:hover,
 }
 .content {
   background: #f7f7f7;
-}
-.content {
   width: 85%;
   margin: 0 auto;
   margin-bottom: 30px;
