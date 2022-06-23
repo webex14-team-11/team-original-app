@@ -55,6 +55,9 @@
 <script></script>
 
 <style scoped>
+img {
+  width: 85%;
+}
 h1 {
   margin: 0 auto;
   font-family: "Montserrat";
@@ -72,6 +75,7 @@ p.title {
   background-color: rgb(226, 223, 223);
   padding-bottom: 20px;
   padding-left: 150px;
+  width: 100%;
 }
 .nav2 > .basicKowlage {
   width: 50%;
