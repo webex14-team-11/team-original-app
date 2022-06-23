@@ -2,7 +2,7 @@
   <div class="app">
     <div class="head">
       <h1>Bulletin Board System</h1>
-      <h2>みんなに推しチームを共有しよう！</h2>
+      <h2>みんなに推しチームを共有しよう！！</h2>
     </div>
     Name
     <div>
@@ -66,7 +66,7 @@
   <div class="post">
     <div class="postlist">
       <h2>Post list</h2>
-      <h3>みんなの推しチームを知ろう！</h3>
+      <h3>みんなの推しチームを知ろう！！</h3>
     </div>
     <div v-for="tweet in tweets" :key="tweet.name">
       <div class="content">
