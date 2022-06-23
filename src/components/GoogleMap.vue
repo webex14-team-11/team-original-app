@@ -1,5 +1,9 @@
 <template>
   <h1>Google Map</h1>
+  <h2>
+    各チームのホームグラウンドがわかる！<br /><span>クリック</span>
+    すると各チームのホームページに飛べるよ！！
+  </h2>
   <div ref="map" id="map"></div>
   <div v-if="overlay">
     <div id="Overlay">
@@ -238,7 +242,25 @@ export default {
   },
 }
 </script>
-<style>
+<style scoped>
+h1 {
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: bold;
+  font-size: 50px;
+  color: #4e4e4e;
+}
+h2 {
+  margin-top: -10px;
+  text-align: center;
+  padding: 0 0 18px 0;
+  font-size: 1.2em;
+  color: #4e4e4e;
+}
+span {
+  color: #e65656;
+  font-size: 1.3em;
+}
 #Overlay {
   /*要素を重ねた時の順番*/
   z-index: 1;
@@ -258,8 +280,8 @@ export default {
 }
 
 #teamData {
-  width: 35%;
-  height: 35%;
+  width: 45%;
+  height: 45%;
   background-color: white;
   position: fixed;
   display: flex;
@@ -277,7 +299,11 @@ export default {
   align-items: center;
   justify-content: center;
   height: 1000px;
-  width: 100%;
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 20px;
+  border: solid 40px #8e8e8e;
+  margin-bottom: 100px;
 }
 button {
   border-radius: 10px;
