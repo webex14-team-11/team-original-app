@@ -224,7 +224,6 @@ button:hover,
   background-color: #edebeb;
 }
 .list {
-  position: absolute;
   font-size: 1em;
   font-weight: 700;
   padding: 15px 10px 15px 10px;
