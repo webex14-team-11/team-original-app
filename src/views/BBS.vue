@@ -244,23 +244,13 @@ button:hover,
   color: #7c7c7c;
 }
 .list {
-  font-size: 1em;
-  font-weight: 700;
-  padding: 15px 10px 15px 10px;
-  font-family: "Source Sans Pro", arial, sans-serif;
-  border: 1px solid #bbbbbb;
-  background: #c5c5c5;
-  color: #fafafa;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 80%;
-  max-width: 800px;
+  font-weight: 900;
+  color: black;
+  transition: all 0.8s;
+  transition: color 0.8;
+}
+.list:hover {
+  transform: scale(1.2, 1.2);
+  color: #98cbb3;
 }
 </style>
