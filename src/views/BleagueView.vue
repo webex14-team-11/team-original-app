@@ -72,10 +72,6 @@
           </p>
         </div>
       </div>
-      <h2><span>05</span>入れ替え戦について！</h2>
-      <div class="chenge">
-        <div class="right"></div>
-      </div>
     </div>
     <!--------------------attracyion---------------------->
     <div class="attraction" v-on:click="attraction">
