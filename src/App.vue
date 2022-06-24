@@ -11,9 +11,10 @@
       >
       <router-link to="/B.league" class="nav_link">B .LEAGUE</router-link>
       <router-link to="/map" class="nav_link">Map</router-link>
+      <router-link to="/BBS" class="nav_link">BBS</router-link>
     </div>
-    <router-view />
   </div>
+  <router-view />
   <div class="footer">
     <ul class="footer-menu">
       <li>Basic Knowledge ｜</li>
@@ -39,14 +40,18 @@
 
 .nav {
   display: flex;
-  padding: 30px;
+  padding: 20px;
   align-items: stretch;
   justify-content: space-between;
   background-color: #ffffff;
+  border-bottom: 6px solid rgb(226, 223, 223);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .nav a {
   font-weight: bold;
+  font-size: 25px;
   color: rgb(0, 0, 0);
 }
 
@@ -66,6 +71,7 @@
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   text-align: center;
+  border-top: 6px solid rgb(226, 223, 223);
 }
 ul.footer-menu li {
   display: inline;

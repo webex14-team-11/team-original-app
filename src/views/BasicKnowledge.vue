@@ -1,5 +1,6 @@
 <template>
   <div class="basic">
+<<<<<<< HEAD
     <img
       src="https://img.kb-cdn.com/imgviewer/NVpIM2ptOHhYRzVmUk5rM1NrNlFxYVV6enV4aGk2UFRJMmxPckdDUUVNWmIrMDNHdTdLaTBxK1VTaHpPeXBlUGxMaExGYit3NUY4bERDVXNEc0xPSWRSckh0cnVFYXFncVlodnlPcmUwRUIyNS9NY0tHZm1UbFJHNzYwQXM5UGhTbHo2eFFqc0N5YnpCRHdTT1p5a0NFUk1TeWNrbDJVcE4yeGkya1IvRTczcmd3MUJMR3ZWUG9BZHpsNktnWnRHL0xmOGlWRmdoMUNKa1VhMWJyQUdhTDIwS2Nxbk4yTk1TWEZVc1hMMWE0UT0=?square=0"
       alt
@@ -216,6 +217,10 @@
         主にゴール下でブロックを避けるために、ゴールに対して横向きの姿勢で打つシュート。
       </p>
     </div>
+=======
+    <h1>This is basic page</h1>
+    <h2>現在作成中</h2>
+>>>>>>> origin/master
   </div>
   <h2>さいごに</h2>
   <p>
