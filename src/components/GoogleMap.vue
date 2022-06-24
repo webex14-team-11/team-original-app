@@ -10,7 +10,7 @@
       <div id="teamData">
         <div>チーム名:{{ selectedteam.name }}</div>
         <div>
-          公式HP<a href="{{ selectedteam.URL }}">{{ selectedteam.URL }}</a>
+          公式HPはこちら→<a v-on:click="externalLink">{{ selectedteam.URL }}</a>
         </div>
         <button v-on:click="del">戻る</button>
       </div>
@@ -28,6 +28,7 @@ export default {
   },
   data() {
     return {
+      select: "",
       selectedteam: {},
       overlay: false,
       start: { lat: 36.15295082154122, lng: 139.36590868766348 },
@@ -221,6 +222,7 @@ export default {
             this.overlay = true
             console.log(this.overlay)
             this.selectedteam = this.teams[i]
+            this.select = JSON.stringify(this.selectedteam.URL)
           })
         }
 
@@ -238,6 +240,11 @@ export default {
   methods: {
     del: function () {
       this.overlay = false
+    },
+    externalLink() {
+      let url = this.selectedteam.URL
+      window.location.href = url
+      console.log(url)
     },
   },
 }
@@ -308,5 +315,8 @@ span {
 button {
   border-radius: 10px;
   padding: 10px 30px 10px 30px;
+}
+a {
+  cursor: pointer;
 }
 </style>
